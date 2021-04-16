@@ -12,6 +12,13 @@ plugins {
 repositories {
       mavenCentral()
     }
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
+}
+test {
+    useJUnitPlatform()
+}
 jar {
       baseName = 'hello-world-gradle'
       version =  '0.1.0'
